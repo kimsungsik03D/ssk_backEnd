@@ -1,0 +1,52 @@
+import { Payment, PaymentSaleLate } from "../types";
+
+/** 카드사 할인율 */
+export const paymentSaleLate: PaymentSaleLate[] = [
+  { key: 1, late: 1, lateName: "1%" },
+  { key: 2, late: 2, lateName: "2%" },
+  { key: 3, late: 3, lateName: "3%" },
+  { key: 4, late: 4, lateName: "4%" },
+  { key: 5, late: 5, lateName: "5%" },
+  { key: 6, late: 6, lateName: "6%" },
+  { key: 7, late: 7, lateName: "7%" },
+  { key: 8, late: 8, lateName: "8%" },
+  { key: 9, late: 9, lateName: "9%" },
+  { key: 10, late: 10, lateName: "10%" },
+  { key: 11, late: 11, lateName: "11%" },
+  { key: 12, late: 12, lateName: "12%" },
+  { key: 13, late: 13, lateName: "13%" },
+  { key: 14, late: 14, lateName: "14%" },
+  { key: 15, late: 15, lateName: "15%" },
+  { key: 16, late: 16, lateName: "16%" },
+  { key: 17, late: 17, lateName: "17%" },
+  { key: 18, late: 18, lateName: "18%" },
+  { key: 19, late: 19, lateName: "19%" },
+  { key: 20, late: 20, lateName: "20%" },
+  { key: 21, late: 21, lateName: "21%" },
+  { key: 22, late: 22, lateName: "22%" },
+  { key: 23, late: 23, lateName: "23%" },
+  { key: 24, late: 24, lateName: "24%" },
+  { key: 25, late: 25, lateName: "25%" },
+  { key: 26, late: 26, lateName: "26%" },
+  { key: 27, late: 27, lateName: "27%" },
+  { key: 28, late: 28, lateName: "28%" },
+  { key: 29, late: 29, lateName: "29%" },
+  { key: 30, late: 30, lateName: "30%" },
+].reverse();
+
+/** 카드사 */
+export const payment: Payment[] = [
+  { key: "samsung", name: "삼성카드" },
+  { key: "kokmin", name: "국민카드" },
+  { key: "uri", name: "우리카드" },
+  { key: "hyundai", name: "현대" },
+  { key: "lotte", name: "롯데" },
+  { key: "toss", name: "토스" },
+  { key: "hana", name: "하나" },
+  { key: "bc", name: "비씨" },
+  { key: "nonghyup", name: "농협" },
+  { key: "kakaobank", name: "카카오뱅크" },
+  { key: "kbank", name: "케이뱅크" },
+  { key: "kiup", name: "기업" },
+  { key: "master", name: "마스터" },
+];

@@ -1,9 +1,11 @@
 import express, { Request, Response } from "express";
 import test from "./routes/test.js";
 import payment from "./routes/payment.js";
+import dotenv from "dotenv";
 
 const app = express();
-const router = express.Router();
+dotenv.config();
+// const uuidAPIKey = require("uuid-apikey");
 
 const port = 8080;
 
