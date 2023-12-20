@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import { authKey } from "./utils";
 import test from "./routes/test.js";
 import payment from "./routes/payment.js";
 import dotenv from "dotenv";
@@ -8,6 +9,16 @@ dotenv.config();
 // const uuidAPIKey = require("uuid-apikey");
 
 const port = 8080;
+
+app.use((req, res, next) => {
+  if (!authKey(req.headers.api_key)) {
+    console.log("is unUsealbe API_KEY");
+    return res.status(403).json({ message: "is usealbe API_KEY" });
+  } else {
+    console.log("is usealbe API_KEY");
+    next();
+  }
+});
 
 app.use("/v1/test", test);
 app.use("/v1/common", payment);
