@@ -9,8 +9,13 @@ const test_js_1 = __importDefault(require("./routes/test.js"));
 const payment_js_1 = __importDefault(require("./routes/payment.js"));
 const veriscient_js_1 = __importDefault(require("./routes/veriscient.js"));
 const dotenv_1 = __importDefault(require("dotenv"));
+const cors_1 = __importDefault(require("cors"));
+const body_parser_1 = __importDefault(require("body-parser"));
 const app = (0, express_1.default)();
 dotenv_1.default.config();
+app.use((0, cors_1.default)());
+app.use((0, body_parser_1.default)());
+// app.use(express.urlencoded({ extended: false })); // uri 방식 폼 요청 들어오면 파싱
 // const uuidAPIKey = require("uuid-apikey");
 const port = 8081;
 app.use((req, res, next) => {

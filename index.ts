@@ -4,9 +4,15 @@ import test from "./routes/test.js";
 import payment from "./routes/payment.js";
 import veriscient from "./routes/veriscient.js";
 import dotenv from "dotenv";
+import cors from "cors";
+import bodyParser from "body-parser";
 
 const app = express();
 dotenv.config();
+app.use(cors());
+app.use(bodyParser());
+// app.use(express.urlencoded({ extended: false })); // uri 방식 폼 요청 들어오면 파싱
+
 // const uuidAPIKey = require("uuid-apikey");
 
 const port = 8081;
